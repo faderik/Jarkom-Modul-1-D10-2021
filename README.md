@@ -69,39 +69,76 @@ Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan passw
 
 
 ## Soal 6
-Pertanyaan
+Cari username dan password ketika melakukan login ke FTP Server!
 
 **Jawaban:**
+- Menggunakan display filter `ftp.request.command == USER || ftp.request.command == PASS`, diperoleh username yaitu 'secretuser' dan password yaitu 'aku.pengen.pw.aja'
+![Soal 6.1](https://user-images.githubusercontent.com/70105993/134767558-c1e92f76-d553-4fbf-9c17-3e649382dd44.png)
+
+- Bisa juga klik kanan paket yang ditampilkan > Follow > TCP Stream untuk melihat detailnya.
+![Soal 6.2](https://user-images.githubusercontent.com/70105993/134767609-932adc08-0f83-4d12-ab9d-c3c3b468b9e1.png)
 
 
 ## Soal 7
-Pertanyaan
+Ada 500 file zip yang disimpan ke FTP Server dengan nama 0.zip, 1.zip, 2.zip, ..., 499.zip. Simpan dan Buka file pdf tersebut. (Hint = nama pdf-nya "Real.pdf")
 
 **Jawaban:**
+- Menggunakan display filter `ftp-data contains "Real.pdf"`, diperoleh file zip yang berisi file Real.pdf yaitu 201.zip
+![Soal 7.1](https://user-images.githubusercontent.com/70105993/134767630-1793397e-aead-4bb2-b141-af8e6a1d6051.jpg)
+
+- Klik kanan salah satu paket > Follow > TCP Stream, ubah 'Show data as' menjadi 'Raw', lalu 'save as' dengan nama 201.zip.
+![Soal 7.2](https://user-images.githubusercontent.com/70105993/134767713-de213a9a-ffdd-446e-91a1-f496926c55b4.png)
+
+- Isi file Real.pdf:
+![Soal 7.3](https://user-images.githubusercontent.com/70105993/134767753-b5342201-bd18-4042-8bc3-96f6913f5135.png)
 
 
 ## Soal 8
-Pertanyaan
+Cari paket yang menunjukan pengambilan file dari FTP tersebut!
 
 **Jawaban:**
+- Menggunakan display filter `ftp.request.command contains "RETR"`, tidak diperoleh paket apapun yang menunjukkan pengambilan file dari FTP.
+![Soal 8.1](https://user-images.githubusercontent.com/70105993/134767837-4b9eb39b-23df-46bb-ae10-0d69e4e6ba5f.jpg)
+
+- Ketika seluruh paket FTP dicek dengan display filter `ftp`, terlihat tidak ada paket dengan command 'RETR', yang mengindikasikan tidak ada pengambilan file dari FTP.
+![Soal 8.2](https://user-images.githubusercontent.com/70105993/134767845-247263f9-5bb9-4b85-9aae-0406926e77ee.jpg)
 
 
 ## Soal 9
-Pertanyaan
+Dari paket-paket yang menuju FTP terdapat inidkasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
 
 **Jawaban:**
+- Menggunakan display filter `ftp-data.command contains secret.zip`, diperoleh paket-paket yang menunjukkan penyimpanan file secret.zip ke FTP.
+![Soal 9.1](https://user-images.githubusercontent.com/70105993/134767976-05a99f38-7bff-41d5-8408-3d680050321a.jpg)
+
+- Klik kanan salah satu paket > Follow > TCP Stream, ubah 'Show data as' menjadi 'Raw', lalu 'save as' dengan nama secret.zip.
+![Soal 9.2](https://user-images.githubusercontent.com/70105993/134768005-50ced66e-fc26-4d66-a87f-fc3b5e396540.png)
+
+- Ketika file zip dibuka, terdapat file Wanted.pdf yang memerlukan password untuk bisa dibuka. Password tersebut didapatkan melalui soal nomor 10.
+![Soal 9.3](https://user-images.githubusercontent.com/70105993/134768003-940bf070-f31f-4fd6-be87-a9ecbeb6357c.png)
 
 
 ## Soal 10
-Pertanyaan
+Selain itu terdapat "history.txt" yang kemungkinan berisi history bash server tersebut! Gunakan isi dari "history.txt" untuk menemukan password untuk membuka file rahasia yang ada di "secret.zip"!
 
 **Jawaban:**
+- Menggunakan display filter `ftp-data.command contains history.txt`, diperoleh paket yang menunjukkan penyimpanan file history.txt ke FTP.
+![Soal 10.1](https://user-images.githubusercontent.com/70105993/134768162-b7031190-bb70-4d85-b706-71956d89d554.jpg)
+
+- Klik kanan paket > Follow > TCP Stream, dan terlihat bahwa file Wanted.pdf dalam secret.zip diberi password berdasarkan isi file bukanapaapa.txt.
+![Soal 10.2](https://user-images.githubusercontent.com/70105993/134768163-2cd81096-a488-4549-91a9-e00edf8b1144.jpg)
+
+- Menggunakan display filter `ftp-data.command contains bukanapaapa.txt`, diperoleh paket yang menunjukkan penyimpanan file bukanapaapa.txt ke FTP.
+![Soal 10.3](https://user-images.githubusercontent.com/70105993/134768165-c5c5f143-1072-457a-908d-ee792d9742f6.jpg)
+
+- Klik kanan paket > Follow > TCP Stream, dan didapatkan teks **d1b1langbukanapaapajugagapercaya** yang merupakan password dari file Wanted.pdf berdasarkan file history.txt.
+![Soal 10.4](https://user-images.githubusercontent.com/70105993/134768166-e3d9f113-5839-4130-8705-3e63bd866984.jpg)
+
+- Isi file Wanted.pdf:
+![Soal 10.5](https://user-images.githubusercontent.com/70105993/134768167-2ff7f2e2-1af6-478a-a33a-1ecfdf2ed148.jpg)
 
 
 ## Soal 11
-Pertanyaan
-
-**Jawaban:**
 
 
 ## Soal 12
