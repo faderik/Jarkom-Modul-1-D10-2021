@@ -1,9 +1,11 @@
 # Praktikum Modul 1 Jarkom 2021 (Kelompok D10)
 
-#### Nama anggota kelompok:
-- Mohammad Faderik I H (05111940000023)
-- Farhan Arifandi (05111940000061)
-- Yusril Zubaydi (05111940000160)
+#### Anggota kelompok:
+| Nama | NRP | Pembagian Pengerjaan Lapres |
+| ---- | --- | --------------- |
+| Mohammad Faderik I H | 05111940000023 | Soal 6-10 |
+| Farhan Arifandi | 05111940000061 | Soal 1-5 |
+| Yusril Zubaydi | 05111940000160 | Soal 11-15 | 
 
 
 ## Soal 1
