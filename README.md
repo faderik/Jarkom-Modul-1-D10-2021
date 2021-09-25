@@ -142,34 +142,39 @@ Selain itu terdapat "history.txt" yang kemungkinan berisi history bash server te
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
 
 **Jawaban:**
-Untuk Mendapatkan paket yang *berasal* dari port 80, menggunakan capture filter **src port 80**. src berfungsi untuk medapatkan paket yang hanya berasal dari port 80.
-![alt text](https://cdn.discordapp.com/attachments/769183322147389460/891293663756427314/unknown.png)
+
+Untuk mendapatkan paket yang *berasal* dari port 80, dapat menggunakan capture filter `src port 80`. `src` berfungsi untuk mendapatkan paket yang hanya berasal dari sumber tertentu.
+![Soal 11](https://cdn.discordapp.com/attachments/769183322147389460/891293663756427314/unknown.png)
 
 ## Soal 12
 Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
 
 **Jawaban:**
-Untuk mendapatkan paket yang mengandung port 21, cukup menggunakan **port 21**.
-![alt text](https://cdn.discordapp.com/attachments/769183322147389460/891295131276308560/unknown.png)
+
+Untuk mendapatkan paket yang mengandung port 21, dapat menggunakan capture filter `port 21`.
+![Soal 12](https://cdn.discordapp.com/attachments/769183322147389460/891295131276308560/unknown.png)
 
 ## Soal 13
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
 
 **Jawaban:**
-Untuk mendapatkan paket yang menuju port 443, bisa menggunakan **dst port 443**. dst berfungsi untuk mendapatkan paket yang hanya menuju port 443.
-![alt text](https://cdn.discordapp.com/attachments/769183322147389460/891293667241889874/unknown.png)
+
+Untuk mendapatkan paket yang menuju port 443, dapat menggunakan capture filter `dst port 443`. `dst` berfungsi untuk mendapatkan paket yang hanya menuju tujuan tertentu.
+![Soal 13](https://cdn.discordapp.com/attachments/769183322147389460/891293667241889874/unknown.png)
 
 ## Soal 14
 Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
 
 **Jawaban:**
-Untuk mendapatkan paket yang tujuannya ke kemenag.go.id, bisa menggunakan **dst host kemenag.go.id**
-![alt text](https://cdn.discordapp.com/attachments/769183322147389460/891293662863056896/unknown.png)
+
+Untuk mendapatkan paket yang tujuannya ke kemenag.go.id, dapat menggunakan capture filter `dst host kemenag.go.id`
+![Soal 14](https://cdn.discordapp.com/attachments/769183322147389460/891293662863056896/unknown.png)
 
 ## Soal 15
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 
 **Jawaban:**
-Untuk mendapatkan paket yang berasal dari IP, pertama, saya mencari tahu IP saya menggunakan ipconfig pada command prompt, setelah itu menggunakan capture filter **ip src (IP)**
-Di sini IP saya 192.168.82.178, sehingga capture filternya menjadi **ip src 192.168.82.178**.
-![alt text](https://cdn.discordapp.com/attachments/769183322147389460/891293667485171712/unknown.png)
+
+Untuk mendapatkan paket yang berasal dari IP, pertama, saya mencari tahu IP saya menggunakan `ipconfig` pada command prompt, setelah itu menggunakan capture filter `ip src (IP)`
+Di sini IP saya 192.168.82.178, sehingga capture filternya menjadi `ip src 192.168.82.178`.
+![Soal 15](https://cdn.discordapp.com/attachments/769183322147389460/891293667485171712/unknown.png)
