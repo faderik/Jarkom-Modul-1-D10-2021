@@ -177,6 +177,6 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 
 **Jawaban:**
 
-Untuk mendapatkan paket yang berasal dari IP, pertama, saya mencari tahu IP saya menggunakan `ipconfig` pada command prompt, setelah itu menggunakan capture filter `ip src (IP)`
+Untuk mendapatkan paket yang berasal dari IP, pertama, saya mencari tahu IP saya menggunakan `ipconfig` pada command prompt, setelah itu menggunakan capture filter `ip src (IP)`.
 Di sini IP saya 192.168.82.178, sehingga capture filternya menjadi `ip src 192.168.82.178`.
 ![Soal 15](https://cdn.discordapp.com/attachments/769183322147389460/891293667485171712/unknown.png)
